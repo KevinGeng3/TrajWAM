@@ -1,17 +1,18 @@
 # TrajWAM 论文主页使用说明
 
-这个静态主页基于 [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) 制作，已接入所提供的论文、演示视频、三张论文裁图与两张主结果表。将本目录推送到 GitHub 后，可通过 GitHub Pages 发布为公开网页；页面内容在 `index.html`，模板样式在 `static/css/index.css`，页面补充样式在 `static/css/content.css`，交互在 `static/js/index.js`；无需安装 npm 依赖或执行构建。
+这个静态主页基于 [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) 制作，已接入所提供的论文、演示视频、三张论文裁图与两张主结果表。官方仓库是 [KevinGeng3/TrajWAM](https://github.com/KevinGeng3/TrajWAM)：`main` 分支用于代码，`web_pages` 分支用于此网站。页面目前尚未确认部署；`web_pages` 推送并启用 GitHub Pages 后，目标网址是 <https://kevingeng3.github.io/TrajWAM/>。页面内容在 `index.html`，模板样式在 `static/css/index.css`，页面补充样式在 `static/css/content.css`，交互在 `static/js/index.js`；无需安装 npm 依赖或执行构建。
 
 ## 本地预览
 
-在项目目录的上一级打开终端并执行：
+网站分支推送后，若已配置 GitHub SSH 访问，可在目标目录的上一级执行：
 
 ```sh
+git clone --branch web_pages --single-branch git@github.com:KevinGeng3/TrajWAM.git trajwam-project-page
 cd trajwam-project-page
 python3 -m http.server 8000
 ```
 
-然后打开 <http://localhost:8000>。终端按 `Ctrl+C` 可停止服务器。也可以直接用浏览器打开 `index.html` 查看页面；使用本地服务器更适合检查媒体和复制引用功能。
+若本地已有本目录，直接在目录内执行 `python3 -m http.server 8000`，无需重新克隆。然后打开 <http://localhost:8000>。终端按 `Ctrl+C` 可停止服务器。也可以直接用浏览器打开 `index.html` 查看页面；使用本地服务器更适合检查媒体和复制引用功能。
 
 ## 替换高清图片
 
@@ -67,11 +68,10 @@ arXiv 地址确定后，搜索 `class="publication-links"`，将 arXiv 的 `<but
 
 ## 发布到 GitHub Pages
 
-1. 在 GitHub 新建用于论文主页的仓库，或使用已有网站仓库。
-2. 上传 **`trajwam-project-page` 目录内的内容**，使 `index.html`、`static/`、`README.md` 和 `.nojekyll` 位于仓库根目录。不要上传外层的 `work/` 或整个工作目录；也不要再套一层 `trajwam-project-page/`，除非有意将网页放在子路径下。
-3. 在仓库的 **Settings → Pages** 中，选择 **Deploy from a branch**，选择所用分支（通常为 `main`）以及 **`/ (root)`**，然后保存。
-4. 等待 GitHub Pages 部署完成，使用其显示的网址访问网站，检查 Paper 和 Code 按钮、视频播放、图片、手机布局和 BibTeX 复制，并在 arXiv 链接发布后验证该按钮。
-5. 正式网址确定后，可在 `<head>` 中新增 `citation_pdf_url`（论文 PDF 的完整公开地址）和 `og:url`（网页地址）等元数据。当前页面尚未设置这两项。
+1. 将 **本目录内的内容** 推送到 [KevinGeng3/TrajWAM](https://github.com/KevinGeng3/TrajWAM) 的 `web_pages` 分支，使 `index.html`、`static/`、`README.md` 和 `.nojekyll` 位于该分支根目录；不要把外层 `work/` 或 `trajwam-project-page/` 目录一起放入分支。`main` 分支保留用于代码。
+2. 在仓库的 **Settings → Pages** 中，将 **Build and deployment → Source** 设为 **Deploy from a branch**，分支选 **`web_pages`**，目录选 **`/ (root)`**，然后保存。必须启用 Pages 并等待部署成功，目标网址 <https://kevingeng3.github.io/TrajWAM/> 才能访问；此处不表示已完成部署。
+3. 部署后检查 Paper 和 Code 按钮、视频播放、图片、手机布局和 BibTeX 复制，并在 arXiv 链接发布后验证该按钮。
+4. 如需补充搜索和分享元数据，可在 `index.html` 的 `<head>` 中新增 `citation_pdf_url`（<https://kevingeng3.github.io/TrajWAM/static/pdfs/TrajWAM.pdf>）及 `og:url`（主页网址）。当前页面尚未设置这两项。
 
 ## 模板来源与授权
 
