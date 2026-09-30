@@ -98,8 +98,7 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <!-- Replace this PDF crop with the final high-resolution Figure 1. -->
-          <img src="static/images/fig1-motivation-performance.png" alt="TrajWAM motivation and performance comparison" class="paper-figure" width="744" height="405" loading="lazy">
+          <img src="static/images/fig1-motivation-performance.png" alt="TrajWAM motivation and performance comparison" class="paper-figure" width="3200" height="1752" loading="lazy">
           <br>
           <p>TrajWAM explicitly grounds future visual prediction in the target object's predicted trajectory. A lightweight Trajectory ControlNet guides a pretrained video model, and an action expert uses the resulting future representation to predict robot actions. Decoupled distillation enables one-step video-action inference.</p>
         </div>
@@ -112,8 +111,7 @@
           <div class="column is-full">
             <div class="content">
               <h2 class="title is-3">Method</h2>
-              <!-- Replace this PDF crop with the final high-resolution Figure 2. -->
-              <p><img src="static/images/fig2-method-overview.png" alt="TrajWAM training and inference pipelines" class="paper-figure" width="1524" height="582" loading="lazy"></p>
+              <p><img src="static/images/fig2-method-overview.png" alt="TrajWAM training and inference pipelines" class="paper-figure" width="3200" height="1222" loading="lazy"></p>
               <p>Given a short history of object masks, a history-conditioned motion predictor forecasts future masks encoding the target object's trajectory. Trajectory ControlNet injects this trajectory into a pretrained video model, steering its predictions toward trajectory-consistent futures. An action expert conditions on the resulting visual representation to generate executable action chunks.</p>
               <p>To accelerate inference, we use a decoupled distillation scheme consisting of distribution matching for the video backbone, Trajectory ControlNet realignment, and action rollout distillation. The resulting model performs one-step inference for both video and action generation.</p>
             </div>
@@ -179,8 +177,7 @@
               <p class="results-note">Cells show successful grasps out of 20 trials. Across both tasks, TrajWAM succeeds in 356/480 trials (74.2%), compared with 49.2% for &pi;<sub>0.5</sub> and 28.8% for Fast-WAM.</p>
               <p>Under high-speed motion, TrajWAM achieves success rates of 65.0% on conveyor-belt grasping and 70.0% on rotating-disc grasping, exceeding &pi;<sub>0.5</sub> by 37.5 and 35.0 percentage points, respectively.</p>
               <h4 class="title is-5">Qualitative comparison</h4>
-              <!-- Replace this PDF crop with the final high-resolution Figure 6. -->
-              <p><img src="static/images/fig6-real-world-comparison.png" alt="Real-world conveyor grasping comparison between pi 0.5, Fast-WAM, and TrajWAM" class="paper-figure" width="1524" height="609" loading="lazy"></p>
+              <p><img src="static/images/fig6-real-world-comparison.png" alt="Real-world conveyor grasping comparison between pi 0.5, Fast-WAM, and TrajWAM" class="paper-figure" width="3200" height="1275" loading="lazy"></p>
               <p>Real-world conveyor-belt grasping comparison. TrajWAM anticipates the target object's motion and successfully grasps it, while the baseline methods fail in this sequence.</p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 # TrajWAM 论文主页使用说明
 
-这个静态主页基于 [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) 制作，已接入所提供的论文、演示视频、三张论文裁图与两张主结果表。官方仓库是 [KevinGeng3/TrajWAM](https://github.com/KevinGeng3/TrajWAM)：`main` 分支用于代码，`web_pages` 分支用于此网站。页面目前尚未确认部署；`web_pages` 推送并启用 GitHub Pages 后，目标网址是 <https://kevingeng3.github.io/TrajWAM/>。页面内容在 `index.html`，模板样式在 `static/css/index.css`，页面补充样式在 `static/css/content.css`，交互在 `static/js/index.js`；无需安装 npm 依赖或执行构建。
+这个静态主页基于 [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) 制作，已接入所提供的论文、演示视频、三张高清论文图片与两张主结果表。官方仓库是 [KevinGeng3/TrajWAM](https://github.com/KevinGeng3/TrajWAM)：`main` 分支用于代码，`web_pages` 分支用于此网站。页面目前尚未确认部署；`web_pages` 推送并启用 GitHub Pages 后，目标网址是 <https://kevingeng3.github.io/TrajWAM/>。页面内容在 `index.html`，模板样式在 `static/css/index.css`，页面补充样式在 `static/css/content.css`，交互在 `static/js/index.js`；无需安装 npm 依赖或执行构建。
 
 ## 本地预览
 
@@ -14,9 +14,9 @@ python3 -m http.server 8000
 
 若本地已有本目录，直接在目录内执行 `python3 -m http.server 8000`，无需重新克隆。然后打开 <http://localhost:8000>。终端按 `Ctrl+C` 可停止服务器。也可以直接用浏览器打开 `index.html` 查看页面；使用本地服务器更适合检查媒体和复制引用功能。
 
-## 替换高清图片
+## 论文图片
 
-当前图片是从所提供论文中裁出的预览图。将高清图以相同文件名覆盖下列文件，即可保留现有页面布局：
+三张图片已分别从 `teaser_v2.pdf`、`overview.pdf`、`real_comp.drawio.pdf` 高清导出。后续若要更新图片，以相同文件名覆盖下列文件即可保留现有页面布局：
 
 | 文件路径 | 页面用途 |
 | --- | --- |
