@@ -1,0 +1,27 @@
+/* Media and author styling specific to this paper. Template CSS stays unchanged. */
+.author-name { color: var(--primary-color); font-weight: 600; }
+.paper-figure { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
+.paper-video { display: block; width: 100%; aspect-ratio: 854 / 480; background: #000; }
+.results-table-wrap { max-width: 100%; overflow-x: auto; margin: 1rem 0 0.4rem; }
+.results-table-wrap:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; }
+.content .results-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; font-variant-numeric: tabular-nums; white-space: nowrap; margin-bottom: 0; }
+.results-table caption { caption-side: top; text-align: left; font-weight: 600; padding-bottom: 0.5rem; }
+.content .results-table th, .content .results-table td { padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--border-color); text-align: right; vertical-align: middle; }
+.content .results-table th:not([align]) { text-align: right; }
+.content .results-table tr > th:first-child { text-align: left; }
+.content .results-table thead th { border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
+.content .results-table tbody th { font-weight: 400; }
+.content .results-table .task-heading th { border-bottom: 0; padding-top: 0.7rem; font-style: italic; font-weight: 600; }
+.results-table .ours { background: var(--background-secondary); }
+.content .results-table-real { min-width: 920px; font-size: 0.8rem; }
+.content .results-table-real th, .content .results-table-real td { padding-inline: 0.4rem; }
+.content .results-table-real thead th:not([align]) { text-align: center; }
+.content .results-table-real thead tr:first-child > th:first-child { text-align: left; }
+.content .results-table-real thead th[rowspan] { position: sticky; left: 0; background: #fff; }
+.results-table-real tbody tr:not(.task-heading) > th:first-child { position: sticky; left: 0; background: #fff; }
+.results-table-real tbody tr.ours > th:first-child { background: var(--background-secondary); }
+.content .results-note { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero, .section { animation: none; }
+}

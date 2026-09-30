@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TrajWAM is a trajectory-guided world action model for efficient dynamic robotic manipulation.">
+  <meta name="keywords" content="TrajWAM, robotic manipulation, world action model, trajectory guidance">
+  <meta name="citation_title" content="TrajWAM: An Efficient Trajectory-Guided World Action Model for Dynamic Robotic Manipulation">
+  <meta name="citation_author" content="Geng, Haohan">
+  <meta name="citation_author" content="Zhang, Sha">
+  <meta name="citation_author" content="Sun, Weishuo">
+  <meta name="citation_author" content="Ye, Guanting">
+  <meta name="citation_author" content="Yu, Wenhao">
+  <meta name="citation_author" content="Xie, Yuang">
+  <meta name="citation_author" content="Zeng, Qicheng">
+  <meta name="citation_author" content="Ye, Peng">
+  <meta name="citation_author" content="Deng, Jiajun">
+  <meta name="citation_author" content="Ji, Jianmin">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="TrajWAM: An Efficient Trajectory-Guided World Action Model for Dynamic Robotic Manipulation">
+  <meta property="og:description" content="A trajectory-guided world action model for dynamic robotic manipulation.">
+  <meta name="theme-color" content="#ffffff">
+  <title>TrajWAM: An Efficient Trajectory-Guided World Action Model for Dynamic Robotic Manipulation</title>
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/content.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">TrajWAM: An Efficient Trajectory-Guided World Action Model for Dynamic Robotic Manipulation</h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Add author links when the URLs are confirmed. -->
+                <span class="author-block"><span class="author-name">Haohan Geng</span><sup>1,†</sup>,</span>
+                <span class="author-block"><span class="author-name">Sha Zhang</span><sup>2,†</sup>,</span>
+                <span class="author-block"><span class="author-name">Weishuo Sun</span><sup>1,†</sup>,</span>
+                <span class="author-block"><span class="author-name">Guanting Ye</span><sup>3</sup>,</span>
+                <span class="author-block"><span class="author-name">Wenhao Yu</span><sup>1</sup>,</span>
+                <span class="author-block"><span class="author-name">Yuang Xie</span><sup>1</sup>,</span>
+                <span class="author-block"><span class="author-name">Qicheng Zeng</span><sup>4</sup>,</span>
+                <span class="author-block"><span class="author-name">Peng Ye</span><sup>2</sup>,</span>
+                <span class="author-block"><span class="author-name">Jiajun Deng</span><sup>1</sup>,</span>
+                <span class="author-block"><span class="author-name">Jianmin Ji</span><sup>1,*</sup></span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>University of Science and Technology of China</span><br>
+                <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong</span><br>
+                <span class="author-block"><sup>3</sup>University of Macau</span>
+                <span class="author-block"><sup>4</sup>Huawei Technologies Co., Ltd.</span>
+                <div class="eql-cntrb"><small><sup>†</sup>Equal contribution &nbsp; <sup>*</sup>Corresponding author</small></div>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block"><a href="static/pdfs/TrajWAM.pdf" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></span><span>Paper</span></a></span>
+                  <!-- Replace this disabled button with an arXiv link when the paper URL is available. -->
+                  <span class="link-block"><button type="button" class="external-link button is-normal is-rounded is-dark" disabled title="arXiv link coming soon" aria-label="arXiv (link coming soon)"><span class="icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span>arXiv</span></button></span>
+                  <span class="link-block"><a href="https://github.com/KevinGeng3/TrajWAM" target="_blank" rel="noopener" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github" aria-hidden="true"></i></span><span>Code</span></a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser" id="video">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <video class="paper-video" controls playsinline preload="metadata" poster="static/images/video-cover.jpg" aria-label="TrajWAM presentation video">
+            <source src="static/videos/TrajWAM-demo.mp4" type="video/mp4">
+            Your browser does not support HTML video. <a href="static/videos/TrajWAM-demo.mp4">Download the video</a>.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified"><p>Dynamic object manipulation requires robots to anticipate target motion while replanning fast enough to avoid executing outdated actions. Existing approaches either rely on fast reactive control without an explicit future target state or encode anticipated motion only implicitly. World Action Models (WAMs) offer a promising alternative by coupling future visual prediction with action generation, but scene-level video objectives may underrepresent target dynamics that are critical for manipulation, while iterative video-action denoising introduces substantial latency. We present TrajWAM, a trajectory-guided world action model for efficient dynamic robotic manipulation. Our key insight is to explicitly ground future visual imagination in predicted target-object motion and use the resulting future representation to condition action generation, while preserving this anticipation pathway after acceleration. Given a short history of object masks, a history-conditioned motion predictor forecasts future masks encoding the target object’s trajectory. A lightweight Trajectory ControlNet then steers a pretrained video model toward trajectory-consistent futures. The resulting future representation conditions an action expert to predict executable action chunks. To enable one-step inference without breaking this interface, we introduce a decoupled distillation scheme that combines distribution matching for the video backbone, Trajectory ControlNet realignment, and action rollout distillation to support accurate one-step action prediction conditioned on the compressed future representation. Comprehensive evaluations in simulation and the real world show that TrajWAM achieves state-of-the-art performance on dynamic object manipulation tasks while enabling efficient one-step video-action inference.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <!-- Replace this PDF crop with the final high-resolution Figure 1. -->
+          <img src="static/images/fig1-motivation-performance.png" alt="TrajWAM motivation and performance comparison" class="paper-figure" width="744" height="405" loading="lazy">
+          <br>
+          <p>TrajWAM explicitly grounds future visual prediction in the target object's predicted trajectory. A lightweight Trajectory ControlNet guides a pretrained video model, and an action expert uses the resulting future representation to predict robot actions. Decoupled distillation enables one-step video-action inference.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-small" id="method">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Method</h2>
+              <!-- Replace this PDF crop with the final high-resolution Figure 2. -->
+              <p><img src="static/images/fig2-method-overview.png" alt="TrajWAM training and inference pipelines" class="paper-figure" width="1524" height="582" loading="lazy"></p>
+              <p>Given a short history of object masks, a history-conditioned motion predictor forecasts future masks encoding the target object's trajectory. Trajectory ControlNet injects this trajectory into a pretrained video model, steering its predictions toward trajectory-consistent futures. An action expert conditions on the resulting visual representation to generate executable action chunks.</p>
+              <p>To accelerate inference, we use a decoupled distillation scheme consisting of distribution matching for the video backbone, Trajectory ControlNet realignment, and action rollout distillation. The resulting model performs one-step inference for both video and action generation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-small" id="results">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">Results</h2>
+              <h3 class="title is-4">Simulation on DOMINO</h3>
+              <p>Across 35 dynamic manipulation tasks, TrajWAM achieves the highest success rate (43.54%) and manipulation score (54.07). Compared with InternVLA-A1.5, it improves success rate by 14.24 percentage points and manipulation score by 11.57, while reducing inference latency from 552.2 ms to 108.5 ms.</p>
+              <div class="results-table-wrap" role="region" aria-label="DOMINO simulation results" tabindex="0">
+                <table class="results-table">
+                  <caption>Table I. Comparison with SOTA methods on DOMINO.</caption>
+                  <thead><tr><th scope="col">Method</th><th scope="col">SR (%) &uarr;</th><th scope="col">MS &uarr;</th><th scope="col">Latency (ms)</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">OpenVLA</th><td>1.54</td><td>6.10</td><td>173.6</td></tr>
+                    <tr><th scope="row">&pi;<sub>0</sub>-FAST</th><td>3.54</td><td>20.87</td><td>119.9</td></tr>
+                    <tr><th scope="row">VLA-Adapter</th><td>4.40</td><td>24.31</td><td>83.6</td></tr>
+                    <tr><th scope="row">RDT-1B</th><td>5.34</td><td>17.71</td><td>246.3</td></tr>
+                    <tr><th scope="row">InternVLA-M1</th><td>5.40</td><td>27.57</td><td>183.8</td></tr>
+                    <tr><th scope="row">Isaac-GR00T</th><td>6.10</td><td>28.60</td><td>76.4</td></tr>
+                    <tr><th scope="row">&pi;<sub>0</sub></th><td>8.17</td><td>23.96</td><td>52.9</td></tr>
+                    <tr><th scope="row">OpenVLA-OFT</th><td>9.06</td><td>24.06</td><td>83.1</td></tr>
+                    <tr><th scope="row">&pi;<sub>0.5</sub></th><td>9.63</td><td>26.17</td><td>59.1</td></tr>
+                    <tr><th scope="row">PUMA</th><td>17.20</td><td>34.97</td><td>85.4</td></tr>
+                    <tr><th scope="row">Fast-WAM</th><td>21.97</td><td>37.27</td><td>183.7</td></tr>
+                    <tr><th scope="row">InternVLA-A1.5</th><td>29.30</td><td>42.50</td><td>552.2</td></tr>
+                    <tr class="ours"><th scope="row">TrajWAM (ours)</th><td><strong>43.54</strong></td><td><strong>54.07</strong></td><td>108.5</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="results-note">SR is task success rate; MS is DOMINO's continuous manipulation score. Latency is per inference.</p>
+
+              <h3 class="title is-4">Real-world dynamic grasping</h3>
+              <p>TrajWAM succeeds in 187/240 conveyor-belt trials (77.9%) and 169/240 rotating-disc trials (70.4%). Each object-speed combination has 20 trials, and a trial succeeds only when the object is grasped and lifted.</p>
+              <div class="results-table-wrap" role="region" aria-label="Real-world grasping results, horizontally scrollable" tabindex="0">
+                <table class="results-table results-table-real">
+                  <caption>Table II. Real-world task success rates.</caption>
+                  <thead>
+                    <tr><th scope="col" rowspan="2">Method</th><th scope="colgroup" colspan="4">Low speed</th><th scope="colgroup" colspan="4">Medium speed</th><th scope="colgroup" colspan="4">High speed</th><th scope="colgroup" colspan="2">Overall</th></tr>
+                    <tr><th scope="col">Banana</th><th scope="col">Bottle</th><th scope="col">Tape</th><th scope="col">Plush toy</th><th scope="col">Banana</th><th scope="col">Bottle</th><th scope="col">Tape</th><th scope="col">Plush toy</th><th scope="col">Banana</th><th scope="col">Bottle</th><th scope="col">Tape</th><th scope="col">Plush toy</th><th scope="col">Succ.</th><th scope="col">SR (%)</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr class="task-heading"><th scope="rowgroup" colspan="15">Conveyor belt</th></tr>
+                    <tr><th scope="row">&pi;<sub>0.5</sub></th><td>15/20</td><td>18/20</td><td>13/20</td><td>19/20</td><td>9/20</td><td>10/20</td><td>8/20</td><td>16/20</td><td>3/20</td><td>0/20</td><td>5/20</td><td>14/20</td><td>130/240</td><td>54.2</td></tr>
+                    <tr><th scope="row">Fast-WAM</th><td>14/20</td><td>6/20</td><td>11/20</td><td>18/20</td><td>5/20</td><td>2/20</td><td>3/20</td><td>8/20</td><td>1/20</td><td>0/20</td><td>1/20</td><td>2/20</td><td>71/240</td><td>29.6</td></tr>
+                    <tr class="ours"><th scope="row">TrajWAM (ours)</th><td>18/20</td><td>16/20</td><td>15/20</td><td>20/20</td><td>16/20</td><td>13/20</td><td>18/20</td><td>19/20</td><td>11/20</td><td>7/20</td><td>16/20</td><td>18/20</td><td><strong>187/240</strong></td><td><strong>77.9</strong></td></tr>
+                  </tbody>
+                  <tbody>
+                    <tr class="task-heading"><th scope="rowgroup" colspan="15">Rotating disc</th></tr>
+                    <tr><th scope="row">&pi;<sub>0.5</sub></th><td>12/20</td><td>5/20</td><td>8/20</td><td>17/20</td><td>6/20</td><td>4/20</td><td>11/20</td><td>15/20</td><td>5/20</td><td>0/20</td><td>10/20</td><td>13/20</td><td>106/240</td><td>44.2</td></tr>
+                    <tr><th scope="row">Fast-WAM</th><td>4/20</td><td>1/20</td><td>6/20</td><td>16/20</td><td>2/20</td><td>2/20</td><td>9/20</td><td>14/20</td><td>1/20</td><td>0/20</td><td>2/20</td><td>10/20</td><td>67/240</td><td>27.9</td></tr>
+                    <tr class="ours"><th scope="row">TrajWAM (ours)</th><td>14/20</td><td>11/20</td><td>16/20</td><td>18/20</td><td>12/20</td><td>13/20</td><td>12/20</td><td>17/20</td><td>12/20</td><td>10/20</td><td>15/20</td><td>19/20</td><td><strong>169/240</strong></td><td><strong>70.4</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="results-note">Cells show successful grasps out of 20 trials. Across both tasks, TrajWAM succeeds in 356/480 trials (74.2%), compared with 49.2% for &pi;<sub>0.5</sub> and 28.8% for Fast-WAM.</p>
+              <p>Under high-speed motion, TrajWAM achieves success rates of 65.0% on conveyor-belt grasping and 70.0% on rotating-disc grasping, exceeding &pi;<sub>0.5</sub> by 37.5 and 35.0 percentage points, respectively.</p>
+              <h4 class="title is-5">Qualitative comparison</h4>
+              <!-- Replace this PDF crop with the final high-resolution Figure 6. -->
+              <p><img src="static/images/fig6-real-world-comparison.png" alt="Real-world conveyor grasping comparison between pi 0.5, Fast-WAM, and TrajWAM" class="paper-figure" width="1524" height="609" loading="lazy"></p>
+              <p>Real-world conveyor-belt grasping comparison. TrajWAM anticipates the target object's motion and successfully grasps it, while the baseline methods fail in this sequence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" id="copy-citation" type="button" title="Copy BibTeX to clipboard"><i class="fas fa-copy" aria-hidden="true"></i><span class="copy-text" aria-live="polite">Copy</span></button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{geng_trajwam,
+  title = {TrajWAM: An Efficient Trajectory-Guided World Action Model for Dynamic Robotic Manipulation},
+  author = {Geng, Haohan and Zhang, Sha and Sun, Weishuo and Ye, Guanting and Yu, Wenhao and Xie, Yuang and Zeng, Qicheng and Ye, Peng and Deng, Jiajun and Ji, Jianmin},
+  note = {Manuscript}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.<br>The website template is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
