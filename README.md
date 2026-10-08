@@ -1,6 +1,6 @@
 # TrajWAM 论文主页使用说明
 
-这个静态主页基于 [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) 制作，已接入所提供的论文、演示视频、三张高清论文图片与两张主结果表。官方仓库是 [KevinGeng3/TrajWAM](https://github.com/KevinGeng3/TrajWAM)：`main` 分支用于代码，`web_pages` 分支用于此网站。页面目前尚未确认部署；`web_pages` 推送并启用 GitHub Pages 后，目标网址是 <https://kevingeng3.github.io/TrajWAM/>。页面内容在 `index.html`，模板样式在 `static/css/index.css`，页面补充样式在 `static/css/content.css`，交互在 `static/js/index.js`；无需安装 npm 依赖或执行构建。
+这个静态主页基于 [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) 制作，已接入所提供的论文、演示视频、五张高清论文图片与两张主结果表。官方仓库是 [KevinGeng3/TrajWAM](https://github.com/KevinGeng3/TrajWAM)：`main` 分支用于代码，`web_pages` 分支用于此网站。页面已通过 GitHub Pages 发布，网址是 <https://kevingeng3.github.io/TrajWAM/>；后续推送 `web_pages` 分支即可更新网站。页面内容在 `index.html`，模板样式在 `static/css/index.css`，页面补充样式在 `static/css/content.css`，交互在 `static/js/index.js`；无需安装 npm 依赖或执行构建。
 
 ## 本地预览
 
@@ -16,12 +16,14 @@ python3 -m http.server 8000
 
 ## 论文图片
 
-三张图片已分别从 `teaser_v2.pdf`、`overview.pdf`、`real_comp.drawio.pdf` 高清导出。后续若要更新图片，以相同文件名覆盖下列文件即可保留现有页面布局：
+图片已分别从 `teaser_v2.pdf`、`overview.pdf`、`distillation_com.pdf`、`action_ed.pdf`、`real_comp.drawio.pdf` 高清导出。后续若要更新图片，以相同文件名覆盖下列文件即可保留现有页面布局：
 
 | 文件路径 | 页面用途 |
 | --- | --- |
 | `static/images/fig1-motivation-performance.png` | Abstract 后的介绍图：论文 Figure 1，研究动机与性能对比 |
 | `static/images/fig2-method-overview.png` | Method：论文 Figure 2，训练和推理流程 |
+| `static/images/fig3-video-distillation.png` | Method：论文 Figure 3，视频骨干蒸馏与 Trajectory ControlNet realignment |
+| `static/images/fig4-action-rollout-distillation.png` | Method：论文 Figure 4，action rollout distillation |
 | `static/images/fig6-real-world-comparison.png` | Results：论文 Figure 6，真实机器人序列对比 |
 
 若使用其他文件名或格式，请同步修改 `index.html` 对应的 `<img src="…">`。建议保留原图宽高比；尺寸改变时，同步更新图片的 `width` 和 `height` 属性。
