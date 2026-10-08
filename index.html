@@ -24,7 +24,7 @@
   <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="stylesheet" href="static/css/content.css">
+  <link rel="stylesheet" href="static/css/content.css?v=distillation-row">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -115,10 +115,12 @@
               <p>Given a short history of object masks, a history-conditioned motion predictor forecasts future masks encoding the target object's trajectory. Trajectory ControlNet injects this trajectory into a pretrained video model, steering its predictions toward trajectory-consistent futures. An action expert conditions on the resulting visual representation to generate executable action chunks.</p>
               <h3 class="title is-4">One-Step Deployment via Decoupled Distillation</h3>
               <p>Iterative video and action sampling introduces latency that is costly for dynamic manipulation. Compressing both branches also changes the future representation read by the action model. We therefore distill TrajWAM in three stages to preserve trajectory guidance and accurate future-conditioned actions under one-step inference.</p>
-              <p><img src="static/images/fig3-video-distillation.png" alt="Video backbone distribution matching distillation and Trajectory ControlNet realignment" class="paper-figure" width="3200" height="2363" loading="lazy"></p>
+              <div class="distillation-figures">
+                <img src="static/images/fig3-video-distillation.png" alt="Video backbone distribution matching distillation and Trajectory ControlNet realignment" class="paper-figure" width="3200" height="2363" loading="lazy">
+                <img src="static/images/fig4-action-rollout-distillation.png" alt="Action rollout distillation from a 10-step video and action teacher to a one-step student with shared inputs and initial noises" class="paper-figure" width="3200" height="1441" loading="lazy">
+              </div>
               <p><strong>Video Backbone Distillation.</strong> We first distill the video generator independently of the trajectory and action branches using distribution matching distillation (DMD). A frozen real-score model and a trainable fake-score model guide the student toward the teacher's future-video distribution.</p>
               <p><strong>Trajectory ControlNet Realignment.</strong> The distilled backbone changes the noise schedule and intermediate features that the trajectory adapter was trained to use. Keeping the fast video generator frozen, we realign the Trajectory ControlNet with latent reconstruction and diffusion-discriminator objectives so that predicted object trajectories remain effective.</p>
-              <p><img src="static/images/fig4-action-rollout-distillation.png" alt="Action rollout distillation from a 10-step video and action teacher to a one-step student with shared inputs and initial noises" class="paper-figure" width="3200" height="1441" loading="lazy"></p>
               <p><strong>Action Rollout Distillation.</strong> With the one-step video generator and trajectory adapter fixed, we train the fast action branch to match the complete action chunk produced by the multi-step teacher. Both models receive the same observations, language, trajectory conditions, and initial video and action noises, allowing the student to adapt to its compressed future representation while retaining the teacher's action predictions.</p>
             </div>
           </div>

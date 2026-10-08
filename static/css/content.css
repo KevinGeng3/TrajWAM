@@ -1,6 +1,10 @@
 /* Media and author styling specific to this paper. Template CSS stays unchanged. */
 .author-name { color: var(--primary-color); font-weight: 600; }
 .paper-figure { display: block; width: 100%; max-width: 100%; height: auto; margin: 0 auto; }
+.distillation-figures { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.64fr); align-items: center; gap: 1.5rem; max-width: 900px; margin: 1.5rem auto; }
+@media (max-width: 767px) {
+  .distillation-figures { grid-template-columns: minmax(0, 1fr); }
+}
 .paper-video { display: block; width: 100%; aspect-ratio: 854 / 480; background: #000; }
 .results-table-wrap { max-width: 100%; overflow-x: auto; margin: 1rem 0 0.4rem; }
 .results-table-wrap:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; }
