@@ -52,19 +52,19 @@ Results 中的表格直接使用 HTML，可在 `index.html` 搜索 `Table I.` �
 <span class="author-block"><a href="作者主页的完整网址" target="_blank" rel="noopener">Haohan Geng</a><sup>1,†</sup>,</span>
 ```
 
-顶部资源按钮为 Paper、arXiv 和 Code。Code 已链接到官方仓库 <https://github.com/KevinGeng3/TrajWAM>，该仓库目前注明代码待发布。arXiv 尚未确认公开地址，按钮暂为禁用状态。
+顶部资源按钮为 Paper、arXiv 和 Code。Code 已链接到官方仓库 <https://github.com/KevinGeng3/TrajWAM>，该仓库目前注明代码待发布。arXiv 按钮已启用，链接为 <https://arxiv.org/abs/2610.25763>。
 
-arXiv 地址确定后，搜索 `class="publication-links"`，将 arXiv 的 `<button …>…</button>` 替换为以下链接，并填写真实地址：
+如需更新 arXiv 链接，在 `index.html` 中搜索 `class="publication-links"`，修改以下链接的 `href`：
 
 ```html
-<a class="external-link button is-normal is-rounded is-dark" href="arXiv 摘要页的完整网址" target="_blank" rel="noopener"><span class="icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span>arXiv</span></a>
+<a class="external-link button is-normal is-rounded is-dark" href="https://arxiv.org/abs/2610.25763" target="_blank" rel="noopener"><span class="icon"><i class="fas fa-file-alt" aria-hidden="true"></i></span><span>arXiv</span></a>
 ```
 
 作者主页尚待补充。添加或更新链接后应逐一打开核对。
 
 ## 引用和正式发表信息
 
-当前 BibTeX 使用手稿条目 `@misc{geng_trajwam, …}`，只包含已确认的论文标题和作者，并以 `note = {Manuscript}` 标注。**正式引用年份、会议或期刊（venue）尚待确认**；视频文件名不作为已录用或正式发表的依据。
+当前 BibTeX 使用 arXiv 预印本条目 `@misc{geng_trajwam, …}`，包含已确认的论文标题、作者、年份（2026）、arXiv 编号（2610.25763）、分类（cs.RO）及摘要页链接。会议或期刊（venue）尚待确认；视频文件名不作为已录用或正式发表的依据。
 
 发表信息确定后，请更新 `index.html` 的 BibTeX，并按实际情况添加 `year`、`booktitle` 或 `journal`、`doi`、`url` 等字段，选择对应条目类型。同时可补充页面顶部的发表信息及 `<head>` 中的 `citation_publication_date`、`citation_conference_title` 等元数据。请不要直接保留未填写的示例值。
 
@@ -72,7 +72,7 @@ arXiv 地址确定后，搜索 `class="publication-links"`，将 arXiv 的 `<but
 
 1. 将 **本目录内的内容** 推送到 [KevinGeng3/TrajWAM](https://github.com/KevinGeng3/TrajWAM) 的 `web_pages` 分支，使 `index.html`、`static/`、`README.md` 和 `.nojekyll` 位于该分支根目录；不要把外层 `work/` 或 `trajwam-project-page/` 目录一起放入分支。`main` 分支保留用于代码。
 2. 在仓库的 **Settings → Pages** 中，将 **Build and deployment → Source** 设为 **Deploy from a branch**，分支选 **`web_pages`**，目录选 **`/ (root)`**，然后保存。必须启用 Pages 并等待部署成功，目标网址 <https://kevingeng3.github.io/TrajWAM/> 才能访问；此处不表示已完成部署。
-3. 部署后检查 Paper 和 Code 按钮、视频播放、图片、手机布局和 BibTeX 复制，并在 arXiv 链接发布后验证该按钮。
+3. 部署后检查 Paper、arXiv 和 Code 按钮、视频播放、图片、手机布局和 BibTeX 复制。
 4. 如需补充搜索和分享元数据，可在 `index.html` 的 `<head>` 中新增 `citation_pdf_url`（<https://kevingeng3.github.io/TrajWAM/static/pdfs/TrajWAM.pdf>）及 `og:url`（主页网址）。当前页面尚未设置这两项。
 
 ## 模板来源与授权
